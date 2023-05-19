@@ -451,7 +451,7 @@ Main Slides Area CSS
 }
 
 .main-slides-item {
- background: url(../images/about/hero-1.png);
+ background: url(../images/about/banner.jpg);
  background-size: cover;
   padding-top: 150px;
   padding-bottom: 100px;
@@ -1080,8 +1080,8 @@ About Area CSS
   z-index: 1;
   overflow: hidden;
 }
-.about-area::before, .about-area::after{position: absolute;content: "";right: 0;bottom: 0;background: url(../images/home-slides/4.jpg);background-size: cover;width: 260px;height: 260px;}
-.about-area::after{bottom: auto;right: auto;left: 0;top: 0;z-index: -1;}
+.about-area::before{position: absolute;content: "";right: 0;bottom: 0;background: url(../images/home-slides/4.jpg);background-size: cover;width: 260px;height: 260px;}
+
 .about-content {
   padding-left: 10px;
   position: relative;
@@ -3400,6 +3400,8 @@ Blog Area CSS
 
 .single-blog-card {
   margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .single-blog-card .blog-image {
@@ -3451,6 +3453,8 @@ Blog Area CSS
 
 .single-blog-card .blog-content p {
   margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .single-blog-card .blog-content .blog-btn {
@@ -4553,6 +4557,8 @@ Team Area CSS
   z-index: 1;
   overflow: hidden;
 }
+.team-area::before, .faq-area1::after{position: absolute;content: "";top: 51px;right: 0;background: url(../images/about/2.png);background-size: cover;width: 225px;height: 444px;background-size: cover;}
+.faq-area1::after{top: auto;bottom: 0;}
 
 .single-team-card {
   margin-bottom: 25px;
@@ -4862,6 +4868,7 @@ FAQ Area CSS
   -webkit-transition: var(--transition);
   transition: var(--transition);
   border-radius: 5px;
+  position: relative;
 }
 
 .faq-accordion .accordion-item:last-child {
@@ -9542,8 +9549,18 @@ Buy Now Btn
 .size-changes{
     padding-right: 80px;
 }
-.faq-area1{position: relative;}
-.faq-area1 h2{color: #ffffff;}
+.faq-area1{position: relative;background: #fff;overflow: hidden;}
+.faq-area1 h2{/* color: #ffffff; */}
 
-.faq-area1::before{position: absolute;content: "";top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;background: url(../images/about/b1.jpg);z-index: -1;background-position: bottom;}
+.faq-area1::before, .blog-area::after{position: absolute;content: "";top: 0;left: -123px;width: 300px;height: 313px;background: url(../images/about/1.png);background-size: cover;}
+.blog-area::after{
+    top: auto;
+    bottom: 31px;
+    background: url(../images/about/2.png);
+    transform: scalex(-1);
+    background-size: cover;
+    height: 328px;
+    width: 216px;
+}
+.footer-area{background: url(../images/about/hero-1.png);background-size: cover;}
 /*# sourceMappingURL=style.css.map */
