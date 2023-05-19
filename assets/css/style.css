@@ -157,6 +157,7 @@ img {
 .pt-70{padding-top: 70px;}
 .pb-70{padding-bottom: 70px;}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #021855;
   color: var(--black-color);
   font-family: var(--heading-font-family);
   font-weight: 900;
@@ -1079,7 +1080,8 @@ About Area CSS
   z-index: 1;
   overflow: hidden;
 }
-
+.about-area::before, .about-area::after{position: absolute;content: "";right: 0;bottom: 0;background: url(../images/home-slides/4.jpg);background-size: cover;width: 260px;height: 260px;}
+.about-area::after{bottom: auto;right: auto;left: 0;top: 0;z-index: -1;}
 .about-content {
   padding-left: 10px;
   position: relative;
@@ -1271,7 +1273,7 @@ Services Area CSS
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(../images/about/pattern-5.jpg);
+  background: linear-gradient(to right, #061C50, #2f0500);
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -2886,11 +2888,12 @@ Pricing Area CSS
 }
 
 .pricing-area.with-black-background {
-  background-color: var(--black-color);
+  /* background-color: var(--black-color); */
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 15px;
   overflow: hidden;
+  background: linear-gradient(to right, #061C50, #2f0500);
 }
 
 .pricing-area.with-black-background .section-title h2 {
@@ -4850,7 +4853,7 @@ FAQ Area CSS
 .faq-accordion {
   max-width: 1050px;
   margin: auto;
-  padding-right: 30px;
+  padding-right: 50px;
 }
 
 .faq-accordion .accordion-item {
@@ -9537,10 +9540,10 @@ Buy Now Btn
 }
 
 .size-changes{
-    padding-right: 120px;
+    padding-right: 80px;
 }
 .faq-area1{position: relative;}
 .faq-area1 h2{color: #ffffff;}
 
-.faq-area1::before{position: absolute;content: "";top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;background: url(../images/about/b1.jpg);z-index: -1;}
+.faq-area1::before{position: absolute;content: "";top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;background: url(../images/about/b1.jpg);z-index: -1;background-position: bottom;}
 /*# sourceMappingURL=style.css.map */
